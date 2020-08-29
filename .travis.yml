@@ -1,12 +1,13 @@
 language: node_js
 node_js:
   - 11
-cache:
-  directories:
-  - node_modules
+before_script:
+  - npm install
+  
 script:
   - npm run test
-  - nom run wdio
+  - npm run wdio
+  
 deploy:
   provider: pages
   skip_cleanup: true
