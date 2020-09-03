@@ -13,5 +13,11 @@ before_script:
   - ./cc-test-reporter before-build
 script:
   - npm run test
+
+env:
+    global:
+  - CC_TEST_REPORTER_ID = 42f52e9f78436643d9e99d6300f45ce9402a46199a168011746a54aedb85f473
+
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  
