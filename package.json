@@ -30,6 +30,10 @@
     "extends": "react-app"
   },
   "jest": {
+    "collectCoverage": true,
+    "coverageReporters": [
+      "lcov"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "!/node_modules/",
